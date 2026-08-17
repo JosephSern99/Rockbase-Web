@@ -1,0 +1,14 @@
+# Rockbase
+
+> Rockbase builds websites, automates back-office work, and runs social media
+> marketing for businesses that need a partner who ships.
+
+## Services
+
+- Web Development — Next.js / React marketing sites and web apps.
+- Robotic Process Automation — automating repetitive back-office work.
+- Social Media Marketing — content strategy, platform management, paid campaigns.
+
+## Contact
+
+See /contact for the enquiry form.
