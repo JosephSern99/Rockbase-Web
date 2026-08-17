@@ -1,4 +1,8 @@
-export type ServiceSlug = "web-development" | "robotic-process-automation" | "social-media-marketing";
+export type ServiceSlug =
+  | "web-development"
+  | "mobile-development"
+  | "robotic-process-automation"
+  | "social-media-marketing";
 
 export interface ServiceSummary {
   slug: ServiceSlug;
@@ -34,6 +38,19 @@ export const services: ServiceSummary[] = [
     displayOrder: 1,
   },
   {
+    slug: "mobile-development",
+    name: "Mobile Development",
+    summary:
+      "Native-feel iOS and Android apps from one codebase, taken from first prototype through to app-store launch.",
+    whatsIncluded: [
+      "Cross-platform builds for iOS and Android from a single codebase",
+      "App Store and Google Play submission and release management",
+      "Ongoing maintenance and OS-version support after launch",
+    ],
+    accentColor: "#10B981",
+    displayOrder: 2,
+  },
+  {
     slug: "robotic-process-automation",
     name: "Robotic Process Automation",
     summary:
@@ -44,7 +61,7 @@ export const services: ServiceSummary[] = [
       "Ongoing monitoring and support",
     ],
     accentColor: "#8B5CF6",
-    displayOrder: 2,
+    displayOrder: 3,
   },
   {
     slug: "social-media-marketing",
@@ -57,7 +74,7 @@ export const services: ServiceSummary[] = [
       "Paid campaign setup and reporting",
     ],
     accentColor: "#F43F5E",
-    displayOrder: 3,
+    displayOrder: 4,
   },
 ];
 
@@ -79,6 +96,7 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
+    { label: "Work", href: "/work" },
     { label: "Team", href: "/team" },
     { label: "Contact", href: "/contact" },
   ],
