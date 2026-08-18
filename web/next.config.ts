@@ -17,10 +17,13 @@ const contentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self' data:",
-  "connect-src 'self'",
+  // formsubmit.co is the contact form's temporary email-delivery plugin —
+  // the browser posts directly to it via fetch(), so it needs to be
+  // allow-listed here or every submission is silently blocked by CSP.
+  "connect-src 'self' https://formsubmit.co",
   // Scoped to the exact case-study deployments embedded live on /work —
   // not a wildcard, so no arbitrary third-party site can be framed here.
-  "frame-src https://sinar-majan-web.vercel.app",
+  "frame-src https://meidian-metals-trading-web.vercel.app",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

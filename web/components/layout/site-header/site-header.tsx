@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { siteConfig } from "@/lib/site-config";
@@ -10,7 +10,12 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <Container className="relative flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${siteConfig.name} home`}>
-          <Image src="/ordinary-fellas-logo.png" alt="" width={36} height={36} priority />
+          <span
+            aria-hidden="true"
+            className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"
+          >
+            <HardHat className="size-5" />
+          </span>
           <span className="text-lg font-semibold tracking-tight text-foreground">
             {siteConfig.name}
           </span>

@@ -63,7 +63,7 @@ export default function ServicesPage() {
 
       <CtaSection
         title="Not sure which service you need?"
-        description="Tell us the problem you're trying to solve — we'll point you at the right service, even if it's not with us."
+        description="Tell us the problem you're trying to solve — we'll point you at the right service."
         cta={siteConfig.cta}
       />
     </>

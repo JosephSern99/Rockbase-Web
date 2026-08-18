@@ -6,7 +6,7 @@ import { services } from "@/lib/site-config";
 interface HeroProps {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
 }
@@ -23,7 +23,9 @@ export function Hero({ eyebrow, title, description, primaryCta, secondaryCta }: 
         <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           {title}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{description}</p>
+        {description ? (
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{description}</p>
+        ) : null}
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <Button size="lg" render={<Link href={primaryCta.href} />}>
             {primaryCta.label}

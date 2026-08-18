@@ -33,7 +33,7 @@ export const showcaseProjects: ShowcaseProject[] = [
       "A B2B web presence for a bulk metals and industrial commodities trader — built to read as credible and established to manufacturing and procurement buyers, not a template storefront.",
     type: "web",
     status: "live",
-    url: "https://sinar-majan-web.vercel.app/",
+    url: "https://meidian-metals-trading-web.vercel.app/",
     tags: ["Web Development", "B2B"],
     accentColor: "#64748B",
   },
@@ -42,7 +42,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     clientName: "Fernwood Coffee Co.",
     industry: "Specialty coffee retail",
     description:
-      "Our own specialty coffee e-commerce build — product catalog, best-seller merchandising, and a newsletter signup funnel. Being redeployed under our own domain; live preview coming soon.",
+      "Our own specialty coffee e-commerce build — product catalog, best-seller merchandising, and a newsletter signup funnel.",
     type: "web",
     status: "comingSoon",
     tags: ["Web Development", "E-Commerce"],

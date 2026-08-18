@@ -26,7 +26,6 @@ export default function HomePage() {
       <Hero
         eyebrow={siteConfig.name}
         title="Web development, robotic process automation, and marketing that actually ships."
-        description={siteConfig.tagline}
         primaryCta={{ label: siteConfig.cta.label, href: siteConfig.cta.href }}
         secondaryCta={{ label: "See our services", href: "/services" }}
       />

@@ -39,12 +39,10 @@ export default function TeamPage() {
                       aria-hidden="true"
                       className="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/10 text-base font-semibold text-primary"
                     >
-                      {member.name.slice(0, 2).toUpperCase()}
+                      {member.alias.slice(0, 2).toUpperCase()}
                     </div>
                     <div>
-                      <p className="text-base font-medium text-foreground">
-                        {member.name} <span className="text-muted-foreground">&ldquo;{member.alias}&rdquo;</span>
-                      </p>
+                      <p className="text-base font-medium text-foreground">{member.alias}</p>
                       <p className="text-sm text-muted-foreground">{member.role}</p>
                     </div>
                   </div>
