@@ -38,13 +38,14 @@ export const showcaseProjects: ShowcaseProject[] = [
     accentColor: "#64748B",
   },
   {
-    slug: "fernwood-coffee",
-    clientName: "Fernwood Coffee Co.",
+    slug: "fenwood-coffee",
+    clientName: "Fenwood Coffee Co.",
     industry: "Specialty coffee retail",
     description:
       "Our own specialty coffee e-commerce build — product catalog, best-seller merchandising, and a newsletter signup funnel.",
     type: "web",
-    status: "comingSoon",
+    status: "live",
+    url: "https://fenwood-coffee-co.vercel.app/",
     tags: ["Web Development", "E-Commerce"],
     accentColor: "#D97706",
   },
