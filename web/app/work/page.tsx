@@ -43,7 +43,7 @@ export default function WorkPage() {
             Real sites, live right now.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            No mockups — every preview below is a live, working deployment. Click through to any
+            No mockups — every preview below is a live working application. Click through to any
             of them.
           </p>
         </Container>
@@ -62,8 +62,8 @@ export default function WorkPage() {
       </Section>
 
       <CtaSection
-        title="Want a site like these?"
-        description="Tell us about your business — we'll show you what we'd build."
+        title="Want a site like this?"
+        description="Have a dream, want a working website — feel free to contact us."
         cta={siteConfig.cta}
       />
     </>

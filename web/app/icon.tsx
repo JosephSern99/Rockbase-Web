@@ -19,13 +19,13 @@ export default function Icon() {
       >
         <div
           style={{
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: 700,
             color: "#0EA5E9",
             fontFamily: "sans-serif",
           }}
         >
-          R
+          OF
         </div>
       </div>
     ),

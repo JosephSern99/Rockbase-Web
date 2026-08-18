@@ -8,13 +8,15 @@ function readServerUrl(name: string, value: string | undefined): string | undefi
   return value;
 }
 
-/**
- * Base URL of the Spring Boot API (e.g. https://api.rockbase.example).
- * Unset in local/dev until the backend exists — callers must handle that
- * explicitly rather than silently falling back to fake data.
- */
-export const API_BASE_URL = readServerUrl("API_BASE_URL", process.env.API_BASE_URL);
-
 export const SITE_URL =
   readServerUrl("NEXT_PUBLIC_SITE_URL", process.env.NEXT_PUBLIC_SITE_URL) ??
   "http://localhost:3000";
+
+/**
+ * FormSubmit.co is a temporary stand-in for lead intake until a real backend
+ * exists — the contact form posts straight to it from the browser. The first
+ * submission to a new destination address requires a one-time email
+ * confirmation from FormSubmit before further submissions deliver.
+ */
+export const FORMSUBMIT_TO = process.env.NEXT_PUBLIC_FORMSUBMIT_TO ?? "ew7063325@gmail.com";
+export const FORMSUBMIT_CC = process.env.NEXT_PUBLIC_FORMSUBMIT_CC ?? "kepler.bef@gmail.com";

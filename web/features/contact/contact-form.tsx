@@ -111,6 +111,25 @@ export function ContactForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
+          <Label htmlFor={`${formId}-phone`}>Contact number</Label>
+          <Input
+            id={`${formId}-phone`}
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            value={values.phone}
+            aria-invalid={Boolean(fieldError(errors, "phone"))}
+            aria-describedby={fieldError(errors, "phone") ? `${formId}-phone-error` : undefined}
+            onChange={(event) => dispatch(fieldChanged({ field: "phone", value: event.target.value }))}
+          />
+          {fieldError(errors, "phone") ? (
+            <p id={`${formId}-phone-error`} className="text-sm text-destructive">
+              {fieldError(errors, "phone")}
+            </p>
+          ) : null}
+        </div>
+
+        <div className="flex flex-col gap-2">
           <Label htmlFor={`${formId}-company`}>Company (optional)</Label>
           <Input
             id={`${formId}-company`}
@@ -174,7 +193,7 @@ export function ContactForm() {
           className={cn(fieldError(errors, "consentMarketing") && "border-destructive")}
         />
         <Label htmlFor={`${formId}-consent`} className="font-normal text-muted-foreground">
-          I agree to be contacted by Rockbase about my enquiry.
+          I agree to provide the above details and to be contacted about my enquiry.
         </Label>
       </div>
       {fieldError(errors, "consentMarketing") ? (

@@ -5,7 +5,7 @@ import { CtaSection } from "@/components/marketing/cta-section";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { buildMetadata } from "@/lib/metadata";
-import { siteConfig, teamRoles } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
@@ -20,13 +20,12 @@ export default function AboutPage() {
         <Container className="max-w-3xl">
           <p className="text-sm font-semibold tracking-wide text-primary uppercase">About us</p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            We build the systems businesses run on.
+            We bring your dream into reality.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            {siteConfig.name} is a small, senior team covering web development, process
-            automation, and social media marketing. We started the company to work directly
-            with clients — no layers of account management between you and the people building
-            your project.
+            {siteConfig.name} is a senior team covering web development, mobile development,
+            and robotic process automation. We started the company to
+            work directly with clients. We are seasoned, experienced engineers.
           </p>
         </Container>
       </Section>
@@ -37,9 +36,9 @@ export default function AboutPage() {
             Our mission
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Give growing businesses the same quality of web engineering, automation, and
-            marketing execution that larger companies take for granted — delivered by a team
-            small enough to move fast and stay accountable for the result.
+            Give growing businesses the same quality of web engineering, robotic process
+            automation, and marketing execution that larger companies take for granted — delivered by a
+            dedicated team that moves fast and stays accountable for the result.
           </p>
         </Container>
       </Section>
@@ -50,8 +49,7 @@ export default function AboutPage() {
             The team
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            {teamRoles.length} founders, one team — no account managers between you and the
-            people building your project.
+            A group of IT professionals who bring your dreams and ideas to life.
           </p>
           <Link
             href="/team"
@@ -64,8 +62,8 @@ export default function AboutPage() {
       </Section>
 
       <CtaSection
-        title="Want to work with us?"
-        description="Tell us about your project and we'll get back to you."
+        title="Want to work with us directly?"
+        description="Have a dream, tell us what needs to be achieved — feel free to contact us."
         cta={siteConfig.cta}
       />
     </>

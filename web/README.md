@@ -1,6 +1,6 @@
-# Rockbase — Web
+# Ordinary Fella's — Web
 
-The Next.js frontend for the Rockbase marketing site. See `../website-architecture-v1.md`
+The Next.js frontend for the Ordinary Fella's marketing site. See `../website-architecture-v1.md`
 for the full technical architecture and `../CLAUDE.md` for stack conventions.
 
 ## Stack
@@ -29,26 +29,27 @@ pnpm lint     # ESLint
 
 ## Environment variables
 
-See `.env.example`. `API_BASE_URL` points at the Spring Boot API and is unset by default —
-until it's set, `POST /api/leads` returns a `503` explaining the backend isn't configured
-yet, rather than faking a success response.
+See `.env.example`. The contact form submits directly to FormSubmit.co (`NEXT_PUBLIC_FORMSUBMIT_TO`)
+— a temporary plugin standing in until a real backend exists. No server-side env vars are
+required for the form to work.
 
 ## Project layout
 
 - `app/` — routes, layouts, route handlers
 - `components/ui/` — shadcn primitives, one folder per component
 - `components/layout/`, `components/marketing/` — layout shell and marketing composites
-- `features/contact/` — the contact form feature
+- `features/contact/` — the contact form feature (submits to FormSubmit.co)
 - `store/` — Redux Toolkit store, hooks, slices
-- `lib/` — site config, metadata builders, env access, validation, the API client layer
+- `lib/` — site config, metadata builders, env access, validation
 
 ## Known follow-ups
 
-- Spring Boot API doesn't exist yet — `lib/api/client.ts` is the integration seam; wire
-  `API_BASE_URL` once it's deployed and the contact form works end-to-end with zero
-  frontend changes.
+- Contact form submission is temporarily wired to FormSubmit.co (`lib/formsubmit.ts`). Replace
+  with a real backend/CRM integration when one exists — the Redux slice's submit thunk is the
+  one place that needs to change.
 - `next.config.ts` CSP keeps `'unsafe-inline'` for the two static JSON-LD `<script>` tags
   (see the comment there for why — moving to a nonce-based CSP would force every marketing
   page to dynamic rendering, which conflicts with the architecture's SSG requirement).
-- About page team section uses role-only placeholders, no invented names/photos — replace
-  with the founders' real details before launch.
+- Team page lists founders by name/role/experience only — no photos yet. Three members
+  (Kranthi, Kelvin, Clayton) have their experience bullets intentionally left blank pending
+  their input — see `lib/site-config.ts`.

@@ -1,8 +1,7 @@
 export type ServiceSlug =
   | "web-development"
   | "mobile-development"
-  | "robotic-process-automation"
-  | "social-media-marketing";
+  | "robotic-process-automation";
 
 export interface ServiceSummary {
   slug: ServiceSlug;
@@ -63,35 +62,57 @@ export const services: ServiceSummary[] = [
     accentColor: "#8B5CF6",
     displayOrder: 3,
   },
+];
+
+export interface TeamMember {
+  name: string;
+  alias: string;
+  role: string;
+  /** Experience summarized by skill/impact, never by project name. */
+  experience: string[];
+}
+
+// Real founders. Experience is summarized without project names by design.
+// Three members' experience is intentionally left blank pending their input.
+export const teamMembers: TeamMember[] = [
   {
-    slug: "social-media-marketing",
-    name: "Social Media Marketing",
-    summary:
-      "Content and campaigns that build an audience and turn attention into leads.",
-    whatsIncluded: [
-      "Content strategy and calendar",
-      "Platform management",
-      "Paid campaign setup and reporting",
+    name: "Joseph",
+    alias: "Joe",
+    role: "Fullstack Developer",
+    experience: [
+      "5+ years building scalable enterprise and fintech systems across Java (Spring Boot, Quarkus), .NET, React, and React Native",
+      "Led end-to-end delivery of production systems — planning, development, UAT, and AWS deployment",
+      "Integrated payment gateways for secure financial transactions",
+      "AWS Certified Solutions Architect – Associate, with hands-on experience architecting cloud-native microservices",
+      "Modernized legacy systems while keeping production stable and downtime low",
     ],
-    accentColor: "#F43F5E",
-    displayOrder: 4,
+  },
+  {
+    name: "Kranthi",
+    alias: "Kumar",
+    role: "Fullstack Developer",
+    experience: [],
+  },
+  {
+    name: "Kelvin",
+    alias: "Kelv",
+    role: "Fullstack Developer",
+    experience: [],
+  },
+  {
+    name: "Clayton",
+    alias: "Clay",
+    role: "Robotic Process Automation Developer",
+    experience: [],
   },
 ];
 
-// Placeholder by role only — no invented names or photos. Replace with the
-// founders' real details before launch.
-export const teamRoles = [
-  "Founder — Web Development",
-  "Founder — Robotic Process Automation",
-  "Founder — Social Media Marketing",
-  "Founder — Client Delivery",
-];
-
 export const siteConfig = {
-  name: "Rockbase",
-  tagline: "Web development, RPA, and social media marketing for growing businesses.",
+  name: "Ordinary Fella's",
+  tagline:
+    "Web development, mobile apps, robotic process automation, and marketing — everything that helps ship your business.",
   description:
-    "Rockbase builds websites, automates back-office work, and runs social media marketing for businesses that need a partner who ships.",
+    "Ordinary Fella's builds websites and mobile apps, and automates back-office work for businesses that need a partner who ships.",
   nav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },

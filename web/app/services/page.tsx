@@ -10,7 +10,7 @@ import { serviceIcons } from "@/lib/service-icons";
 
 export const metadata: Metadata = buildMetadata({
   title: "Services",
-  description: "Web development, robotic process automation, and social media marketing.",
+  description: "Web development, mobile apps, and robotic process automation.",
   path: "/services",
 });
 
@@ -43,8 +43,8 @@ export default function ServicesPage() {
             What we do, in plain terms.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Three services. Pick one, or combine them — most projects end up touching more
-            than one.
+            {services.length} services. Pick one, or combine them — most projects end up touching
+            more than one.
           </p>
         </Container>
       </Section>

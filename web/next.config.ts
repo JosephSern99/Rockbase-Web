@@ -20,7 +20,7 @@ const contentSecurityPolicy = [
   "connect-src 'self'",
   // Scoped to the exact case-study deployments embedded live on /work —
   // not a wildcard, so no arbitrary third-party site can be framed here.
-  "frame-src https://fabula-coffee-shop.vercel.app https://sinar-majan-web.vercel.app https://luxe-home-furniture-website.vercel.app https://flexflow-fitness.vercel.app",
+  "frame-src https://sinar-majan-web.vercel.app",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

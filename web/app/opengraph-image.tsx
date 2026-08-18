@@ -59,7 +59,7 @@ export default function OpengraphImage() {
             lineHeight: 1.2,
           }}
         >
-          Web development, RPA, and social media marketing
+          Web development, mobile apps, and robotic process automation
         </div>
         <div
           style={{

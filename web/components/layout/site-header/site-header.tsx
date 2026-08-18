@@ -10,7 +10,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <Container className="relative flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${siteConfig.name} home`}>
-          <Image src="/rockbase-logo.png" alt="" width={36} height={36} priority />
+          <Image src="/ordinary-fellas-logo.png" alt="" width={36} height={36} priority />
           <span className="text-lg font-semibold tracking-tight text-foreground">
             {siteConfig.name}
           </span>

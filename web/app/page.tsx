@@ -15,7 +15,7 @@ import { serviceIcons } from "@/lib/service-icons";
 import { showcaseProjects } from "@/lib/showcase-config";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Web Development, RPA & Social Media Marketing",
+  title: "Web Development, Mobile Apps, Robotic Process Automation & Marketing",
   description: siteConfig.description,
   path: "/",
 });
@@ -24,8 +24,8 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="Rockbase"
-        title="Web development, automation, and marketing that actually ships."
+        eyebrow={siteConfig.name}
+        title="Web development, robotic process automation, and marketing that actually ships."
         description={siteConfig.tagline}
         primaryCta={{ label: siteConfig.cta.label, href: siteConfig.cta.href }}
         secondaryCta={{ label: "See our services", href: "/services" }}
@@ -38,7 +38,7 @@ export default function HomePage() {
               What we do
             </h2>
             <p className="mt-3 max-w-2xl text-muted-foreground">
-              Three services, one team. We pick the right combination for what you actually need.
+              {services.length} services, one team. We pick the right combination for what you actually need.
             </p>
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -90,9 +90,9 @@ export default function HomePage() {
           <Reveal>
             <StatBlock
               items={[
-                { icon: Zap, label: "Fast execution", description: "Small team, few handoffs, short feedback loops." },
-                { icon: MessageCircle, label: "Direct communication", description: "You talk to the people doing the work, not an account manager." },
-                { icon: ShieldCheck, label: "Built to last", description: "Production-grade engineering from the first commit, not a prototype." },
+                { icon: Zap, label: "Fast execution", description: "Experienced IT professionals with a track record of delivering ahead of project deadlines." },
+                { icon: MessageCircle, label: "Direct communication", description: "You have direct access to the software engineer responsible for building your dream into reality." },
+                { icon: ShieldCheck, label: "Build to scale", description: "Delivering production-grade systems that scale according to your business needs." },
               ]}
             />
           </Reveal>
@@ -102,7 +102,7 @@ export default function HomePage() {
       <Reveal>
         <CtaSection
           title="Have a project in mind?"
-          description="Tell us what you're trying to build or automate — we'll tell you honestly if we're a fit."
+          description="Tell us your dream application and we will bring it to life."
           cta={{ label: siteConfig.cta.label, href: siteConfig.cta.href }}
         />
       </Reveal>

@@ -18,13 +18,13 @@ export default function AppleIcon() {
       >
         <div
           style={{
-            fontSize: 100,
+            fontSize: 76,
             fontWeight: 700,
             color: "#0EA5E9",
             fontFamily: "sans-serif",
           }}
         >
-          R
+          OF
         </div>
       </div>
     ),

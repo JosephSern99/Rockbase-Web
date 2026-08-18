@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Mail } from "lucide-react";
 import { ContactForm } from "@/features/contact/contact-form";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
@@ -8,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us",
-  description: `Get in touch with ${siteConfig.name} about a web development, RPA, or social media marketing project.`,
+  description: `Get in touch with ${siteConfig.name} about a web development, mobile app, or robotic process automation project.`,
   path: "/contact",
 });
 
@@ -26,10 +25,6 @@ export default function ContactPage() {
             what you&apos;re trying to build or automate — it helps us respond with something
             useful instead of a form email.
           </p>
-          <div className="mt-8 flex items-center gap-3 text-sm text-muted-foreground">
-            <Mail aria-hidden="true" className="size-4 text-primary" />
-            <span>We reply within one business day.</span>
-          </div>
         </div>
 
         <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">

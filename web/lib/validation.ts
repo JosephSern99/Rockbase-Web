@@ -5,9 +5,12 @@ export interface FieldError {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const PHONE_RE = /^[0-9+()\-\s]{7,20}$/;
+
 export interface ContactFormInput {
   fullName: string;
   email: string;
+  phone: string;
   company: string;
   serviceInterest: string;
   message: string;
@@ -16,8 +19,8 @@ export interface ContactFormInput {
 
 /**
  * Hand-written validation (no schema library, per project direction).
- * Shared by the client-side Redux slice and the server-side route handler
- * so the two never drift.
+ * Shared by the client-side Redux slice submit thunk so form errors never
+ * drift from what actually gets submitted.
  */
 export function validateContactForm(input: ContactFormInput): FieldError[] {
   const errors: FieldError[] = [];
@@ -32,6 +35,12 @@ export function validateContactForm(input: ContactFormInput): FieldError[] {
     errors.push({ field: "email", message: "Email is required." });
   } else if (!EMAIL_RE.test(input.email.trim())) {
     errors.push({ field: "email", message: "Enter a valid email address." });
+  }
+
+  if (!input.phone.trim()) {
+    errors.push({ field: "phone", message: "Contact number is required." });
+  } else if (!PHONE_RE.test(input.phone.trim())) {
+    errors.push({ field: "phone", message: "Enter a valid contact number." });
   }
 
   if (input.company.trim().length > 200) {

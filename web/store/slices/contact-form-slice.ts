@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { submitToFormSubmit } from "@/lib/formsubmit";
 import { validateContactForm, type ContactFormInput, type FieldError } from "@/lib/validation";
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
@@ -12,6 +13,7 @@ interface ContactFormState {
 const initialValues: ContactFormInput = {
   fullName: "",
   email: "",
+  phone: "",
   company: "",
   serviceInterest: "",
   message: "",
@@ -35,15 +37,12 @@ export const submitContactForm = createAsyncThunk<
     return rejectWithValue(clientErrors);
   }
 
-  const response = await fetch("/api/leads", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(values),
-  });
-
-  const body = (await response.json().catch(() => ({}))) as { errors?: FieldError[] };
-  if (!response.ok) {
-    return rejectWithValue(body.errors ?? [{ field: "_", message: "Submission failed." }]);
+  try {
+    await submitToFormSubmit(values);
+  } catch {
+    return rejectWithValue([
+      { field: "_", message: "Something went wrong submitting your message. Please try again." },
+    ]);
   }
 });
 
