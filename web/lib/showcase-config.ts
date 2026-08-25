@@ -54,7 +54,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     clientName: "sat2Tani",
     industry: "Agricultural technology (AgTech)",
     description:
-      "A satellite-based precision agriculture platform for Indonesian farmers and agribusinesses — soil health, weather forecasting, and pest/disease alerts delivered via web and mobile.",
+      "A satellite-based precision agriculture platform for farmers and agribusinesses — soil health, weather forecasting, and pest/disease alerts delivered via web and mobile.",
     type: "web",
     status: "live",
     url: "https://sat2tani.com/",
