@@ -50,6 +50,18 @@ export const showcaseProjects: ShowcaseProject[] = [
     accentColor: "#D97706",
   },
   {
+    slug: "sat2tani",
+    clientName: "sat2Tani",
+    industry: "Agricultural technology (AgTech)",
+    description:
+      "A satellite-based precision agriculture platform for Indonesian farmers and agribusinesses — soil health, weather forecasting, and pest/disease alerts delivered via web and mobile.",
+    type: "web",
+    status: "live",
+    url: "https://sat2tani.com/",
+    tags: ["Web Development", "AgTech"],
+    accentColor: "#15803D",
+  },
+  {
     slug: "liquor-mobile-app",
     clientName: "Amber & Oak Spirits (illustrative)",
     industry: "Liquor & spirits retail",

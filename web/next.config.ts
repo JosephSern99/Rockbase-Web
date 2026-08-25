@@ -23,7 +23,7 @@ const contentSecurityPolicy = [
   "connect-src 'self' https://formsubmit.co",
   // Scoped to the exact case-study deployments embedded live on /work —
   // not a wildcard, so no arbitrary third-party site can be framed here.
-  "frame-src https://meidian-metals-trading-web.vercel.app https://fenwood-coffee-co.vercel.app",
+  "frame-src https://meidian-metals-trading-web.vercel.app https://fenwood-coffee-co.vercel.app https://sat2tani.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
